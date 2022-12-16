@@ -1,0 +1,288 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+}
+
+
+body.escuro input[type="range"]::-webkit-slider-thumb {
+
+  appearance: none;
+  width: 1.6rem;
+  height:  1.6rem;
+  border-radius: 50%; 
+  background: white;
+  cursor: pointer;
+}
+
+body.escuro input[type="range"]{
+ 
+  background-color: white;
+ 
+}
+
+input[type="range"]::-webkit-slider-thumb {
+
+  appearance: none;
+  width: 1.6rem;
+  height:  1.6rem;
+  border-radius: 50%; 
+  background: #323238;
+  cursor: pointer;
+}
+
+input[type="range"]{
+  appearance: none;
+  border-radius: 0.5rem;
+  background-color: #323238;
+  width: 9rem;
+  height: 0.4rem;
+}
+
+
+body .luz{
+  position: absolute;
+  top: 6rem;
+  right: 6rem;
+  
+}
+
+body.escuro .luz, body .escuro{
+  display: none;
+}
+
+body.escuro{
+  background: #121214;
+} 
+
+
+body.escuro .escuro{
+  position: absolute;
+  top: 6rem;
+  right: 6rem;
+  display: block;
+ 
+}
+
+body.escuro .caixa-timer{
+  color: white;
+}
+
+body.escuro .controls button svg path {
+  fill: #C4C4CC;
+}
+
+body.escuro .caixa-direita div{
+ background-color: #29292E;
+}
+
+body.escuro .caixa-direita div svg path {
+  fill: #C4C4CC;
+}
+
+
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+  background: #FFFFFF;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  
+}
+main {
+  display: flex;
+  width: 82.1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.caixa-timer {
+  justify-content: center;
+  display: flex;
+  font-weight: 500;
+  text-align: center;
+  color: #323238;
+  font-size: 12.61rem;
+
+}
+
+
+.caixa-direita {
+  display: grid;
+  gap: 3.2rem;
+  grid-template-columns: 1fr 1fr;
+}
+.caixa-direita div {
+  border-radius: 2.4rem;
+  background-color: #E1E1E6;
+  width: 13.8rem;
+  height: 15.2rem;
+  display: grid;
+  align-content: space-evenly;
+  place-items: center;
+
+  
+  transition: background 0.2s linear;
+  cursor: pointer;
+  
+
+
+}
+
+
+.caixa-direita div:hover input[type="range"]::-webkit-slider-thumb {
+
+  background: white;
+
+}
+
+.caixa-direita div:hover input[type="range"]{
+ 
+  background-color: white;
+ 
+}
+
+.caixa-direita div:hover, .caixa-direita div:hover svg path {
+  background: #02799D;
+  transition: background 0.2s ease-out;
+  fill: white;
+}
+
+body.escuro .caixa-direita div:hover, body.escuro .caixa-direita div:hover svg path {
+  background: #0A3442;
+  transition: background 0.2s ease-out;
+  fill: white;
+}
+
+
+
+
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+}
+.controls{
+  margin-top: 1.7rem;;
+  display: flex;
+
+  justify-content: center;
+  gap: 4rem;
+
+}
+.controls button svg path {
+  fill: #323238;
+}
+
+
+/*
+body.floresta .floresta {
+  background: linear-gradient(90deg, #508150 10%, #ffffff 100%)
+}
+body.floresta {
+  background: linear-gradient(310deg, #508150 10%, #FFFFFF 100%)
+}
+body.floresta .caixa-direita .floresta svg path {
+  fill: white;
+}
+body.chuva .caixa-direita .chuva svg path {
+  fill: white;
+}
+body.cafeteria .caixa-direita .cafeteria svg path {
+  fill: white;
+}
+body.lareira .caixa-direita .lareira svg path {
+  fill: white;
+}
+
+body.floresta .caixa-direita div:hover{
+  background: linear-gradient(90deg, #508150 10%, #ffffff 100%)
+}
+
+
+body.lareira {
+  background: linear-gradient(129deg, #bfa9a9 10%, #e10000 100%)
+}
+body.lareira .lareira {
+  background: linear-gradient(280deg, #bfa9a9 10%, #e10000 100%)
+}
+body.lareira .caixa-direita div:hover{
+  background: linear-gradient(280deg, #bfa9a9 10%, #e10000 100%)
+}
+body.chuva{
+  background: linear-gradient(310deg, #306edf 10%, #ffffff 100%);
+}
+body.chuva .chuva {
+  background: linear-gradient(90deg, #306edf 10%, #ffffff 100%);
+}
+
+body.chuva .caixa-direita div:hover{
+  background: linear-gradient(90deg, #306edf 10%, #ffffff 100%);
+}
+
+body.cafeteria{
+  background: linear-gradient(310deg, #a37124 10%, #ffffff 100%);
+}
+body.cafeteria .cafeteria {
+  background: linear-gradient(90deg, #a37124 10%, #ffffff 100%);
+}
+
+body.cafeteria .caixa-direita div:hover{
+  background: linear-gradient(90deg, #a37124 10%, #ffffff 100%);
+}
+
+
+*/
+
+@media (max-width: 860px) {
+  :root {
+    font-size: 50%;
+  }
+
+}
+
+
+@media (max-width: 675px) {
+  :root {
+    font-size: 45%;
+  }
+
+}
+
+
+@media (max-width: 600px){
+  body .luz, body.escuro .escuro{
+    top: 2rem;
+    right: 2rem;
+    
+  }
+
+  :root {
+    font-size: 45%;
+  }
+  
+  main {
+    display: grid;
+    gap: 6rem;
+    width: 100vw;
+    place-content: center;
+  }
+  .caixa-esquerda {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+  }
+  .caixa-direita div{
+    place-self: center;
+  
+  }
+}
