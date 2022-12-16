@@ -8,36 +8,6 @@
   font-size: 62.5%;
 }
 
-body.escuro input[type='range']::-webkit-slider-thumb {
-  appearance: none;
-  width: 1.6rem;
-  height: 1.6rem;
-  border-radius: 50%;
-  background: white;
-  cursor: pointer;
-}
-
-body.escuro input[type='range'] {
-  background-color: white;
-}
-
-input[type='range']::-webkit-slider-thumb {
-  appearance: none;
-  width: 1.6rem;
-  height: 1.6rem;
-  border-radius: 50%;
-  background: #323238;
-  cursor: pointer;
-}
-
-input[type='range'] {
-  appearance: none;
-  border-radius: 0.5rem;
-  background-color: #323238;
-  width: 9rem;
-  height: 0.4rem;
-}
-
 body .luz,
 body.escuro .escuro {
   position: absolute;
@@ -79,7 +49,6 @@ body {
   place-items: center;
   min-height: 100vh;
   width: 100vw;
-
 }
 main {
   display: flex;
@@ -152,64 +121,130 @@ button {
   fill: #323238;
 }
 
-/*
-body.floresta .floresta {
-  background: linear-gradient(90deg, #508150 10%, #ffffff 100%)
+body.escuro input[type='range']::-webkit-slider-thumb {
+  appearance: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
 }
+
+body.escuro input[type='range'] {
+  background-color: white;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  appearance: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: #323238;
+  cursor: pointer;
+}
+
+input[type='range'] {
+  appearance: none;
+  border-radius: 0.5rem;
+  background-color: #323238;
+  width: 9rem;
+  height: 0.4rem;
+}
+
+/*-------------------TEMA CLARO-----------------------*/
+/*-------------------FLORESTA-----------------------*/
+
 body.floresta {
-  background: linear-gradient(310deg, #508150 10%, #FFFFFF 100%)
-}
-body.floresta .caixa-direita .floresta svg path {
-  fill: white;
-}
-body.chuva .caixa-direita .chuva svg path {
-  fill: white;
-}
-body.cafeteria .caixa-direita .cafeteria svg path {
-  fill: white;
-}
-body.lareira .caixa-direita .lareira svg path {
-  fill: white;
+  background: linear-gradient(310deg, #508150 10%, #ffffff 100%);
 }
 
-body.floresta .caixa-direita div:hover{
-  background: linear-gradient(90deg, #508150 10%, #ffffff 100%)
+body.floresta .caixa-direita div:hover {
+  background: linear-gradient(90deg, #508150 10%, #ffffff 100%);
 }
 
+/*-------------------CHUVA-----------------------*/
 
-body.lareira {
-  background: linear-gradient(129deg, #bfa9a9 10%, #e10000 100%)
-}
-body.lareira .lareira {
-  background: linear-gradient(280deg, #bfa9a9 10%, #e10000 100%)
-}
-body.lareira .caixa-direita div:hover{
-  background: linear-gradient(280deg, #bfa9a9 10%, #e10000 100%)
-}
-body.chuva{
+body.chuva {
   background: linear-gradient(310deg, #306edf 10%, #ffffff 100%);
 }
-body.chuva .chuva {
+
+body.chuva .caixa-direita div:hover {
   background: linear-gradient(90deg, #306edf 10%, #ffffff 100%);
 }
 
-body.chuva .caixa-direita div:hover{
-  background: linear-gradient(90deg, #306edf 10%, #ffffff 100%);
-}
+/*-------------------CAFETEIRA-----------------------*/
 
-body.cafeteria{
+body.cafeteria {
   background: linear-gradient(310deg, #a37124 10%, #ffffff 100%);
 }
-body.cafeteria .cafeteria {
+
+body.cafeteria .caixa-direita div:hover {
   background: linear-gradient(90deg, #a37124 10%, #ffffff 100%);
 }
 
-body.cafeteria .caixa-direita div:hover{
-  background: linear-gradient(90deg, #a37124 10%, #ffffff 100%);
+/*-------------------LAREIRA-----------------------*/
+
+body.lareira {
+  background: linear-gradient(129deg, #bfa9a9 10%, #e10000 100%);
 }
 
+body.lareira .caixa-direita div:hover {
+  background: linear-gradient(280deg, #bfa9a9 10%, #e10000 100%);
+}
 
-*/
+/*-------------------TEMA ESCURO-----------------------*/
+/*-------------------FLORESTA-----------------------*/
+body.escuro.floresta {
+  background: #1d4020;
+}
+body.escuro.floresta .caixa-direita div:hover {
+  background: #16641c;
+}
+
+body.escuro.floresta .caixa-direita .floresta {
+  background: #29292e;
+}
+
+/*-------------------CHUVA-----------------------*/
+
+body.escuro.chuva {
+  background: #223b6a;
+}
+body.escuro.chuva .caixa-direita div:hover {
+  background: #032462;
+}
+
+body.escuro.chuva .caixa-direita .chuva {
+  background: #29292e;
+}
+
+/*-------------------CAFETERIA-----------------------*/
+
+body.escuro.cafeteria {
+  background: #4a3616;
+}
+body.escuro.cafeteria .caixa-direita div:hover {
+  background: #816232;
+}
+
+body.escuro.cafeteria .caixa-direita .cafeteria {
+  background: #29292e;
+}
+
+/*-------------------LAREIRA-----------------------*/
+
+body.escuro.lareira {
+  background: #581111;
+}
+body.escuro.lareira .caixa-direita div:hover {
+  background: #7a1e1e;
+}
+
+body.escuro.lareira .caixa-direita .lareira {
+  background: #29292e;
+}
+
+/*-------------------RESPONSIVIDADE-----------------------*/
 
 @media (min-width: 280px) and (max-width: 768px) {
   body .luz,
