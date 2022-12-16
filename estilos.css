@@ -43,10 +43,12 @@ input[type="range"]{
 }
 
 
-body .luz{
+body .luz, body.escuro .escuro{
   position: absolute;
   top: 6rem;
   right: 6rem;
+  display: block;
+ 
   
 }
 
@@ -59,13 +61,6 @@ body.escuro{
 } 
 
 
-body.escuro .escuro{
-  position: absolute;
-  top: 6rem;
-  right: 6rem;
-  display: block;
- 
-}
 
 body.escuro .caixa-timer{
   color: white;
@@ -84,7 +79,6 @@ body.escuro .caixa-direita div svg path {
 }
 
 
-
 body {
   font-size: 1.6rem;
   font-family: 'Roboto', sans-serif;
@@ -93,6 +87,8 @@ body {
   place-items: center;
   min-height: 100vh;
   width: 100vw;
+  border: 1px solid red;
+
   
 }
 main {
@@ -241,33 +237,56 @@ body.cafeteria .caixa-direita div:hover{
 
 */
 
-@media (max-width: 860px) {
-  :root {
-    font-size: 50%;
-  }
-
-}
 
 
-@media (max-width: 675px) {
-  :root {
-    font-size: 45%;
-  }
 
-}
-
-
-@media (max-width: 600px){
+@media (min-width: 280px) and (max-width: 768px){
   body .luz, body.escuro .escuro{
-    top: 2rem;
-    right: 2rem;
+    top: 3rem;
+    right: 3rem;
+    
+  }
+ 
+  :root {
+    font-size: 53%;
+  }
+  .caixa-direita div{
+    place-self: center;
+    width: 15.8rem;
+
+  }
+
+  main {
+    margin-top: 5rem;
+    justify-content: center;
+    display: grid;
+    gap: 6rem;
+    width: 100%;
+    place-items: center;
+  }
+
+}
+
+@media(min-width: 768px) and (max-width: 1024px){
+  body .luz, body.escuro .escuro{
+    top: 3rem;
+    right: 3rem;
+    
+  }
+:root{
+  font-size: 57%;
+}
+
+
+}
+/*
+@media (max-width: 768px){
+   body .luz, body.escuro .escuro{
+    top: 3rem;
+    right: 3rem;
     
   }
 
-  :root {
-    font-size: 45%;
-  }
-  
   main {
     display: grid;
     gap: 6rem;
@@ -281,8 +300,5 @@ body.cafeteria .caixa-direita div:hover{
     align-items: center;
   
   }
-  .caixa-direita div{
-    place-self: center;
-  
-  }
 }
+*/
