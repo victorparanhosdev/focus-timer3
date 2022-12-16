@@ -97,16 +97,13 @@ Botao.menos.addEventListener('click', ()=> {
   
 })
 
-
 Botao.floresta.addEventListener('click', ()=>{
-  
   Sound.chuva.pause()
   Sound.cafeteria.pause()
   Sound.lareira.pause()
   Sound.floresta.play()
   
 })
-
 Botao.chuva.addEventListener('click', ()=>{
 
   Sound.floresta.pause()
@@ -115,7 +112,6 @@ Botao.chuva.addEventListener('click', ()=>{
   Sound.chuva.play()
 
 })
-
 Botao.cafeteria.addEventListener('click', ()=>{
 
   Sound.floresta.pause()
@@ -124,7 +120,6 @@ Botao.cafeteria.addEventListener('click', ()=>{
   Sound.cafeteria.play()
 
 })
-
 Botao.lareira.addEventListener('click', ()=>{
 
   Sound.floresta.pause()
