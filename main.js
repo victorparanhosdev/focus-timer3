@@ -40,7 +40,7 @@ const Sound = {
   floresta: new Audio('./files/Floresta.wav'),
   chuva: new Audio('./files/Chuva.wav'),
   cafeteria: new Audio('./files/Cafeteria.wav'),
-  lareira: new Audio('./files/lareira.wav')
+  lareira: new Audio('./files/Lareira.mp3'),
 }
 
 let resetTimer
@@ -150,6 +150,7 @@ Botao.cafeteria.addEventListener('click', () => {
   }
 })
 Botao.lareira.addEventListener('click', () => {
+
   if (!Botao.corpo.classList.contains('lareira')) {
     Botao.corpo.classList.remove('floresta')
     Botao.corpo.classList.remove('chuva')
