@@ -55,6 +55,7 @@ function countDown() {
     clearTimeout(resetTimer)
     Botao.minutos.textContent = '00'
     Botao.segundos.textContent = '00'
+    verificarSeBotaoStopfoiPressionado = true
     return
   }
 
