@@ -17,7 +17,8 @@ const Botao = {
     'https://github.com/maykbrito/automatic-video-creator/blob/master/audios/kichen-timer.mp3?raw=true'
   ),
   luz: document.querySelector('.luz'),
-  escuro: document.querySelector('.escuro')
+  escuro: document.querySelector('.escuro'),
+  range: document.querySelectorAll('.btn-range'),
 }
 
 Botao.luz.addEventListener('click', () => {
@@ -116,9 +117,14 @@ Botao.floresta.addEventListener('click', () => {
     Sound.floresta.pause()
     Botao.corpo.classList.remove('floresta')
   }
+
+ 
 })
 
 Botao.chuva.addEventListener('click', () => {
+ 
+
+
   if (!Botao.corpo.classList.contains('chuva')) {
     Botao.corpo.classList.remove('floresta')
     Botao.corpo.classList.remove('lareira')
@@ -167,3 +173,7 @@ Botao.lareira.addEventListener('click', () => {
     Botao.corpo.classList.remove('lareira')
   }
 })
+
+
+
+
