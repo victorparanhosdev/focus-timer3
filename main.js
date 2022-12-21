@@ -18,7 +18,10 @@ const Botao = {
   ),
   luz: document.querySelector('.luz'),
   escuro: document.querySelector('.escuro'),
-  range: document.querySelectorAll('.btn-range'),
+  rangeFloresta: document.querySelector('#input-flor'),
+  rangeChuva: document.querySelector('#input-chuva'),
+  rangeCafeteria: document.querySelector('#input-cafeteria'),
+  rangeLareira: document.querySelector('#input-lareira')
 }
 
 Botao.luz.addEventListener('click', () => {
@@ -41,7 +44,7 @@ const Sound = {
   floresta: new Audio('./files/Floresta.wav'),
   chuva: new Audio('./files/Chuva.wav'),
   cafeteria: new Audio('./files/Cafeteria.wav'),
-  lareira: new Audio('./files/Lareira.mp3'),
+  lareira: new Audio('./files/Lareira.mp3')
 }
 
 let resetTimer
@@ -102,78 +105,55 @@ Botao.menos.addEventListener('click', () => {
   }
 })
 
-Botao.floresta.addEventListener('click', () => {
-  if (!Botao.corpo.classList.contains('floresta')) {
-    Botao.corpo.classList.add('floresta')
-    Sound.floresta.play()
-    Sound.chuva.pause()
-    Sound.cafeteria.pause()
-    Sound.lareira.pause()
-    Sound.floresta.loop = true
-    Botao.corpo.classList.remove('chuva')
-    Botao.corpo.classList.remove('lareira')
-    Botao.corpo.classList.remove('cafeteria')
-  } else {
-    Sound.floresta.pause()
-    Botao.corpo.classList.remove('floresta')
-  }
+const SoundOff = (som1, som2, som3) => {
+  som1.pause()
+  som2.pause()
+  som3.pause()
+}
 
- 
+Botao.floresta.addEventListener('click', () => {
+  Sound.floresta.volume = Botao.rangeFloresta.value / 100
+  Sound.floresta.loop = true
+  Botao.corpo.classList.add('floresta')
+  Sound.floresta.play()
+  SoundOff(Sound.cafeteria, Sound.chuva, Sound.lareira)
+  Botao.corpo.classList.remove('chuva')
+  Botao.corpo.classList.remove('lareira')
+  Botao.corpo.classList.remove('cafeteria')
 })
 
 Botao.chuva.addEventListener('click', () => {
- 
+  Sound.chuva.volume = Botao.rangeChuva.value / 100
+  Sound.chuva.loop = true
+  Botao.corpo.classList.remove('floresta')
+  Botao.corpo.classList.remove('lareira')
+  Botao.corpo.classList.remove('cafeteria')
+  Botao.corpo.classList.add('chuva')
+  SoundOff(Sound.cafeteria, Sound.floresta, Sound.lareira)
+  Sound.chuva.play()
 
-
-  if (!Botao.corpo.classList.contains('chuva')) {
-    Botao.corpo.classList.remove('floresta')
-    Botao.corpo.classList.remove('lareira')
-    Botao.corpo.classList.remove('cafeteria')
-    Botao.corpo.classList.add('chuva')
-    Sound.floresta.pause()
-    Sound.cafeteria.pause()
-    Sound.lareira.pause()
-    Sound.chuva.play()
-    Sound.chuva.loop = true
-  } else {
-    Sound.chuva.pause()
-    Botao.corpo.classList.remove('chuva')
-  }
 })
+
 Botao.cafeteria.addEventListener('click', () => {
-  if (!Botao.corpo.classList.contains('cafeteria')) {
-    Botao.corpo.classList.remove('floresta')
-    Botao.corpo.classList.remove('chuva')
-    Botao.corpo.classList.remove('lareira')
-    Botao.corpo.classList.add('cafeteria')
-    Sound.floresta.pause()
-    Sound.chuva.pause()
-    Sound.lareira.pause()
-    Sound.cafeteria.play()
-    Sound.cafeteria.loop = true
-  } else {
-    Sound.cafeteria.pause()
-    Botao.corpo.classList.remove('cafeteria')
-  }
+  Sound.cafeteria.volume = Botao.rangeCafeteria.value / 100
+  Botao.corpo.classList.remove('floresta')
+  Botao.corpo.classList.remove('chuva')
+  Botao.corpo.classList.remove('lareira')
+  Botao.corpo.classList.add('cafeteria')
+  SoundOff(Sound.floresta, Sound.chuva, Sound.lareira)
+  Sound.cafeteria.play()
+  Sound.cafeteria.loop = true
 })
+
 Botao.lareira.addEventListener('click', () => {
-
-  if (!Botao.corpo.classList.contains('lareira')) {
-    Botao.corpo.classList.remove('floresta')
-    Botao.corpo.classList.remove('chuva')
-    Botao.corpo.classList.remove('cafeteria')
-    Botao.corpo.classList.add('lareira')
-    Sound.floresta.pause()
-    Sound.chuva.pause()
-    Sound.cafeteria.pause()
-    Sound.lareira.play()
-    Sound.lareira.loop = true
-  } else {
-    Sound.lareira.pause()
-    Botao.corpo.classList.remove('lareira')
-  }
+  Sound.lareira.volume = Botao.rangeLareira.value / 100
+  Botao.corpo.classList.remove('floresta')
+  Botao.corpo.classList.remove('chuva')
+  Botao.corpo.classList.remove('cafeteria')
+  Botao.corpo.classList.add('lareira')
+  SoundOff(Sound.cafeteria, Sound.chuva, Sound.floresta)
+  Sound.lareira.play()
+  Sound.lareira.loop = true
+  
 })
-
-
-
 
